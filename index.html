@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contacto QR</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode.js/qrcode.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Generador de Tarjeta de Contacto (QR)</h1>
+    </header>
+
+    <main>
+        <form id="contactForm">
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Teléfono (Ej: +1234567890):</label>
+            <input type="tel" id="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="org">Organización/Empresa:</label>
+            <input type="text" id="org">
+
+            <button type="submit">Generar Código QR</button>
+        </form>
+
+        <section id="qrContainer" class="hidden">
+            <h2>Código QR de Contacto (vCard)</h2>
+            <div id="qrcode">
+                </div>
+            <p>Escanea este código con tu smartphone para guardar el contacto.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Programación Web con GitHub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
